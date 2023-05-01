@@ -22,6 +22,6 @@ A. Few things to check:
 
 	...
 	```
-3. The debouncing ([What is debouncing?](https://www.techtarget.com/whatis/definition/debouncing#:~:text=Debouncing%20is%20removing%20unwanted%20input,hardware%20switches%2C%20programs%20and%20websites.)) with the resistor is required for making the button work properly because it can provide stable voltage status as the button is pressing. Otherwise the signal (voltage) will be in floating status and you will never know whether the button is pressed or not by the signal.
+3. The debouncing ([What is debouncing?](https://www.techtarget.com/whatis/definition/debouncing#:~:text=Debouncing%20is%20removing%20unwanted%20input,hardware%20switches%2C%20programs%20and%20websites.)) with the resistor is necessary for removing unwanted input noise from buttons, switches and other inputs. Otherwise the signal (voltage) will be unstable and you will never know whether the button is pressed or not by the signal.
 
 
