@@ -2,7 +2,7 @@ Notes for testing modules in different platforms.
 <br>
 
 ## Modules with Arduino boards
-[Arduino Uno with MFRC522 - RFID reader / writer module](https://github.com/miguelbalboa/rfid)
+[Arduino Uno with MFRC522 - RFID reader / writer module](RFID-reader_MFRC522)
 
 <br>
 
