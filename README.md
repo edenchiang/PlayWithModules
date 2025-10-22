@@ -6,9 +6,10 @@ It's a place for notes of testing modules in different platforms.
 
 ## Modules
 
-- [MFRC522 RFID reader / writer module --- with Arduino Uno](RFID-reader_MFRC522)
-
-- [Thermal printer EM5820 --- with Arduino Uno / ESP32](thermal-printer_EM5820)
+- [MFRC522 RFID reader / writer module --- with Arduino Uno](/RFID-reader_MFRC522)
+- [Thermal printer EM5820 --- with Arduino Uno / ESP32](/thermal-printer_EM5820)
+- [Raspberry Pi RP2040 with ESP-12 chip](/RPi-Pico_with_ESP-12S/)
+- [Turn Arduino Nano ESP32 into a pyboard of CircuitPython](/Nano-ESP32_in_CircuitPython/)
 
 <br />
 
