@@ -16,6 +16,8 @@ It's a place for notes of testing modules in different platforms.
   - _#Arduino-Nano-ESP32, #pyboard, #circuitpython_
 - [DFRobot MP3 player module for Arduino / ESP32](/DFPlayer-Mini/)
   - _#ESP32, #DFPlayer-Mini, #DFRobot，#mp3-player_
+- [Cailiang 64x32 RGB LED Matrix - 256x128mm with ESP32](/Cailiang-64x32-RGB-LED-Matrix-256x128mm/)
+  - _#ESP32, #Cailiang-64x32-RGB-LED-Matrix-256x128mm, #RGB-LED-Matrix_
 
 <br />
 
