@@ -14,6 +14,8 @@ It's a place for notes of testing modules in different platforms.
   - _#RPI-Pico, #RP2040, #ESP_
 - [Turn Arduino Nano ESP32 into a pyboard of CircuitPython](/Nano-ESP32_in_CircuitPython/)
   - _#Arduino-Nano-ESP32, #pyboard, #circuitpython_
+- [DFRobot MP3 player module for Arduino / ESP32](/DFPlayer-Mini/)
+  - _#ESP32, #DFPlayer-Mini, #DFRobot，#mp3-player_
 
 <br />
 
