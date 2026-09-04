@@ -20,14 +20,15 @@ A showcase of moving DC motors with H-bridge module in Arduino plarform and Micr
 ### ESP32-S2
 
 - [**LilyGO ESP32-S2**](https://www.tinytronics.nl/en/development-boards/microcontroller-boards/with-wi-fi/lilygo-ttgo-t8-esp32-s2-with-sd-card-slot)
+- [**Wemps ESP32-S2 Pico**](https://www.tinytronics.nl/en/development-boards/microcontroller-boards/with-wi-fi/wemos-s2-pico-with-oled-display-esp32-s2)
 
 ### 2 x DC motors
 
 ### Power source: 12V x 2A
 
-### Wiring
+### Wiring of HW-095
 
-- 5V-GND-12V on HW-095
+- 5V-GND-12V
   - 5V：For output mainly, and provide power for logic control of the module. Keep the 2 pins for 5V (closed) connected.
   - GND：Ground pin, GND of ESP32-S2 board and external power supply have to be connected together here.
   - 12V：Input of external power source.
@@ -35,14 +36,22 @@ A showcase of moving DC motors with H-bridge module in Arduino plarform and Micr
   - IN1、IN2 for OUT1、OUT2
   - IN3、IN4 for OUT3、OUT4
   - For using PWM, ENA / ENB have to be connected with the 5V pins above both the pins
-- Pins：
-  - 4、5、6、7 to IN1、IN2、IN3、IN4
 
 ### 照片
 
 ![Full set](images/ESP32-S2_H-bridge_control.jpg)
 
-![Wiring of ESP32-S2](images/ESP32-S2_H-bridge_control_ESP32-S2.jpg)
+![Wiring of ESP32-S2 Pico](images/ESP32-S2_H-bridge_control_ESP32-S2-Pico.jpg)
+
+<br />
+
+## Platforms
+
+### Arduino: ESP32-S2_with_H-Bridge.ino
+
+### MicroPython: esp32-s2-hw-095.py
+
+- Required library: [ssd1306](lib/ssd1306.py)
 
 <br />
 
