@@ -7,7 +7,8 @@ A showcase of moving DC motors with H-bridge module in Arduino plarform and Micr
 ## Core idea - PWM control
 
 - Control speed with PWM through IN1、IN2、IN3、IN4
-- Implement PWM on ESP32 only with **ledcWrite(pin_num, speed)**, not analogWrite()!!
+- In Arduino platform, implement PWM on ESP32 only with **ledcWrite(pin_num, speed)**, not analogWrite()!!
+- In MicroPython, the "ssd1306" library is the required driver for the display.
 
 <br />
 
