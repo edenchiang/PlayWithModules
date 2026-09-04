@@ -28,10 +28,8 @@ A showcase of moving DC motors with H-bridge module in Arduino plarform and Micr
 ### Wiring
 
 - 5V-GND-12V on HW-095
-  - 5V：For output mainly, and provide power for logic control of the module. Keep the 2 pins for \
-    5V (closed) connected.
-  - GND：Ground pin, GND of ESP32-S2 board and external power supply have to be connected \
-    together here.
+  - 5V：For output mainly, and provide power for logic control of the module. Keep the 2 pins for 5V (closed) connected.
+  - GND：Ground pin, GND of ESP32-S2 board and external power supply have to be connected together here.
   - 12V：Input of external power source.
 - Control
   - IN1、IN2 for OUT1、OUT2
@@ -51,6 +49,4 @@ A showcase of moving DC motors with H-bridge module in Arduino plarform and Micr
 ## QA
 
 - Use external power source of 5V? \
-  L298N has huge decrease of voltage due to the design, which is about 2V, this means if external power source \
-  is 5V, the logic circuit of the module will only get less than 4V to start working properly!! So, the external power \
-  must provide power over 6V at least!
+  L298N has huge decrease of voltage due to the design, which is about 2V, this means if external power source is 5V, the logic circuit of the module will only get less than 4V to start working properly!! So, the external power must provide power over 6V at least!
