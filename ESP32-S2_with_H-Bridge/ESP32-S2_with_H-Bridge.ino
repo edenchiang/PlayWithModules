@@ -1,3 +1,9 @@
+/*
+ *  Example for controlling two motors with an h-bridge module via ESP32-S2 boards in Arduino platform and MicroPython
+ *  Created by: Eden Chiang (i.chiang@tue.nl) @ Sep. 4, 2026
+ *
+ */
+
 // Pin define, ENA should be connected to the 5V pin above!
 const int IN1 = 5;
 const int IN2 = 6;
