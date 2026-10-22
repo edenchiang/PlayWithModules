@@ -32,11 +32,10 @@ This is a reimplimentation for an old student project, "Mustick" in 2008 of TU/e
 
 ## Wiring
 
-| Arduino Nano RP2040 Connect |  Lipo Rider Plus  | Lipo battery |
-| :------: | :-----: | :-----: |
-|   Vin    |   5V   |  Red |
-|   Gnd    |   Gnd   | Black |
-
+| Arduino Nano RP2040 Connect | Lipo Rider Plus | Lipo battery |
+| :-------------------------: | :-------------: | :----------: |
+|             Vin             |       5V        |     Red      |
+|             Gnd             |       Gnd       |    Black     |
 
 <br />
 

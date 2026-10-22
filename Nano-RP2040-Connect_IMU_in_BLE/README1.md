@@ -1,0 +1,119 @@
+# Mustick - BLE Interactive Music Stick
+
+A modern re-implementation of the classic 2008 TU/e student interaction project "Mustick".
+
+This project reads motion data from an IMU sensor on an Arduino Nano RP2040 Connect, broadcasts motion intensity over Bluetooth Low Energy (BLE) to a Python bridge on a Raspberry Pi, and dynamically modulates music playback speed in Processing via OSC messages. When movement stops, playback smoothly ramps down and pauses.
+
+![mustick](images/mustick.jpg)
+
+<br />
+
+## Preparation
+
+### Hardware Requirements
+
+1. **Arduino Nano RP2040 Connect** (with onboard LSM6DSOX IMU & BLE)
+2. **Seeed Studio LiPo Rider Plus** & **LiPo Battery** (for portable power)
+3. **Raspberry Pi 4** (running Raspberry Pi OS)
+4. **Audio DAC Shield** (External DAC shield for Raspberry Pi to ensure smooth, low-latency hardware audio decoding)
+5. Speaker or headphones connected to the audio DAC shield
+
+### Software & Environment
+
+1. **Arduino IDE 2.3.10+** (with Mbed OS Nano board support package)
+2. **Python 3.12+**
+3. **Processing 4**
+4. An audio file formatted as `.wav` named `song.wav` by default
+
+<br />
+
+## Architecture Overview
+
+[ Arduino Nano RP2040 Connect ] │ LSM6DSOX IMU motion detection
+
+▼ BLE Notification (Device Name: "Mustick")
+
+[ Python BLE Bridge (ble_bridge.py) ] │ Runs on Raspberry Pi / Localhost
+
+▼ OSC Protocol (UDP Port 12000, Address: "/accel")
+
+[ Processing (song.wav + Minim Sound Engine) ] │ Runs on Raspberry Pi / Localhost
+
+▼ Dynamic Playback Speed (0.0x ~ 1.0x) / Audio Output via DAC Shield
+
+<br />
+
+## Setup & Installation
+
+### 1. Arduino Firmware Setup
+
+1. Open the Arduino sketch in Arduino IDE.
+2. Install the required libraries via the Arduino Library Manager:
+   - `Arduino_LSM6DSOX`
+   - `ArduinoBLE`
+   - `floatToString`
+3. Configure your UUID credentials in `secrets.h`:
+
+   ```cpp | title=secrets.h
+   #define TARGET_NAME "Mustick"
+   #define SERVICE_UUID "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+   #define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+   Connect the Arduino Nano RP2040 Connect, select the proper COM port, and upload the code.
+   ```
+
+### 2. Python BLE Bridge Setup
+
+1. Open terminal on your host machine or Raspberry Pi
+
+2. Install the required Python libraries:
+
+```Bash
+> pip install bleak python-osc
+```
+
+3. Verify that the device name (Mustick) and CHARACTERISTIC_UUID match those defined in `secrets.h`.
+
+### 3. Processing Environment Setup
+
+1. Open Processing and install the following libraries via Sketch
+
+   [Import Library] -> [Manage Libraries] -> Search and install
+   - Minim (by Damien Di Fede and Anderson Mills)
+
+   - oscP5 (by Andreas Schlegel)
+
+2. Place your audio track named `song.wav` into the `data/` folder inside the Processing sketch directory.
+
+3. If running on Raspberry Pi OS, verify that the Java Sound System properties point to the hardware Direct Audio Device:
+
+```Java
+System.setProperty("javax.sound.sampled.Clip", "com.sun.media.sound.DirectAudioDeviceProvider");
+System.setProperty("javax.sound.sampled.SourceDataLine", "com.sun.media.sound.DirectAudioDeviceProvider");
+```
+
+<br />
+
+## Usage
+
+1. Power up the Mustick: Turn on the Arduino Nano RP2040 Connect powered by the LiPo Rider Plus battery. The board will begin advertising as Mustick.
+
+2. Start the Python Bridge:
+
+```Bash
+python ble_bridge.py
+```
+
+The script will scan for Mustick, establish the BLE connection, and forward incoming accelerometer data to 127.0.0.1:12000.
+
+3. Launch Processing: Run the Processing sketch.
+
+4. Interact:
+   - Shake or swing the device: Processing transitions to the MOVING state (green display) and scales the music playback speed up to 1.0x.
+
+   - Keep the device stationary: Processing transitions to the STILL state (red display) and smoothly decelerates playback to 0x (paused).
+
+<br />
+
+## Author
+
+I-Tang (Eden) Chiang - TU/e Industrial Design
