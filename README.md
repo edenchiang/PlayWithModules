@@ -20,6 +20,8 @@ It's a place for notes of testing modules in different platforms.
   - _#ESP32, #Cailiang-64x32-RGB-LED-Matrix-256x128mm, #RGB-LED-Matrix_
 - [ESP32-S2 with H-Bridge module](/ESP32-S2_with_H-Bridge/)
   - _#ESP32-S2, #h-beidgek #hw-095, #MicroPython, #Arduino_
+- [Reimplimentation for an old TU/e student project in 2008, Mustick](/Nano-RP2040-Connect_IMU_in_BLE/)
+  - _#BLE, #Arduino-Nano-RP2040-Connect, #Lipo, #Processing, #audio_
 
 <br />
 
