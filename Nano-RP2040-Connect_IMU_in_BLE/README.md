@@ -19,7 +19,7 @@ The mustick reads motion data from an IMU sensor on an Arduino Nano RP2040 Conne
 This rebuilt prototype is demostrated in the ID25 Expo of TU/e in Oct.17, 2026 - Oct. 25, 2026.
 
 ![ID25Expo](images/25yr_IDExpo.jpg)<br />
-**Figure 3** - The demo in 25ID Expo.
+**Figure 3** - The demo in ID25 Expo.
 
 <br />
 
